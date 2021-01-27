@@ -1,5 +1,5 @@
 import React from "react"
-
+import style from "./lista.module.css"
 export default function Lista(){
     const lista = [
         {id: "1",produto:"Arroz",preco:'4,99' },
@@ -12,16 +12,25 @@ export default function Lista(){
 
 return (
     <>
-    <ul>
-        {lista.map((cur)=>{
-            return (
-            <li key={cur.id}>
-                <p>Produto: {cur.produto}</p>
-                <p>Preço: {cur.preco}</p>
-            </li>
-            )
-        })}
-    </ul>
+    <table className={style.table}>
+        <thead>
+            <th>Id</th>
+            <th>Produto</th>
+            <th>Preço</th>
+        </thead>
+        <tbody>
+            {lista.map((cur)=>{
+                return (
+                    <tr key={cur.id} >
+                        <td>{cur.id}</td>
+                        <td>{cur.produto}</td>
+                        <td>{cur.preco}</td>
+                    </tr>            
+                )
+            })}
+            
+        </tbody>
+    </table>
     </>
 )
 }
