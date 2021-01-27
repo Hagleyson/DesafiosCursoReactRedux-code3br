@@ -1,12 +1,13 @@
 .container{
-    min-width: 400px;
-    height: 200px;
+    min-width: 400px;   
+    max-height: 300px; 
     display: flex;
     flex-direction: column;
     background-color: aquamarine;
     border-radius: 10px;
     overflow: hidden; 
-    text-align: center;    
+    text-align: center;   
+    margin: 15px; 
 }
 .title{
   padding: 10px;
