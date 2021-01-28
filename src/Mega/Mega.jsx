@@ -1,5 +1,8 @@
 import React from "react"
-
+function gerar(array){
+    let al = parseInt( Math.random() * 60)   
+    return array.includes(al) ? gerar(array): al
+}
 class Mega extends React.Component{
     state=({
         number: this.props.numbeer  | 0 ,
@@ -12,21 +15,13 @@ class Mega extends React.Component{
         })
     }    
     handleClick = (valor)=>{ 
-        const numbers = []  
+          let number = []
         for(var i = 0; i !== valor;i++){                      
-         let al = parseInt( Math.random() * 60)               
-          for(var y = 0;y <= numbers.length;y++){
-              if(numbers[y]===al){    
-                  console.log("ERRROOOO",al) 
-                  this.handleClick(valor)             
-                  return false
-              }
-          }
-          numbers[i]=al
+            number[i]=gerar(number)        
         }            
-        console.log(numbers)   
+        console.log(...number)   
         this.setState({
-            numbers: numbers
+            numbers: number
         })        
     }
     render(){
