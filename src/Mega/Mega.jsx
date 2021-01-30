@@ -6,20 +6,20 @@ function gerar(array){
 class Mega extends React.Component{
     state=({
         number: this.props.numbeer  | 0 ,
-        numbers: []               
+        numbers: []              
     })               
     
     handleChange = (e) => {
         this.setState({
-            number: +e.target.value
+            number: +e.target.value,
+            numbers: Array(+e.target.value).fill(0)
         })
     }    
     handleClick = (valor)=>{ 
-          let number = []
+          let number = Array(valor).fill(0)
         for(var i = 0; i !== valor;i++){                      
             number[i]=gerar(number)        
         }            
-        console.log(...number)   
         this.setState({
             numbers: number
         })        
