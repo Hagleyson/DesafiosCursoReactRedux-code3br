@@ -27,7 +27,7 @@ class Mega extends React.Component{
     render(){
         return (
         <>
-            <input type="number" value={this.state.number} onChange={this.handleChange}/>
+            <input min="6" max="15" type="number" value={this.state.number} onChange={this.handleChange}/>
             <button onClick={()=>this.handleClick(this.state.number)}>gerar</button>
             <div>
                 <h1>Números</h1>
