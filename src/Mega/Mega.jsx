@@ -5,7 +5,7 @@ function gerar(array){
 }
 class Mega extends React.Component{
     state=({
-        number: this.props.numbeer  | 0 ,
+        number: this.props.numbeer  | 6 ,
         numbers: []              
     })               
     
