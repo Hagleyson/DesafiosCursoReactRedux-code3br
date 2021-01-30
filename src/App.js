@@ -3,10 +3,14 @@ import Desafios from "./Desafios/Desafios"
 import NumeroAleatorio from "./NuAle/NumerosAleatorios"
 import Lista from "./Lista/Lista"
 import Mega from "./Mega/Mega"
+import ParImpar from "./UfParIm/ParImpar"
 
 function App() {
   return (
     <section className="app">
+      <Desafios title="UseEffect Par Impar ">
+        <ParImpar/>
+      </Desafios>
       <Desafios title="Mega ">
         <Mega></Mega>
       </Desafios>
