@@ -5,9 +5,13 @@ import Lista from "./Lista/Lista"
 import Mega from "./Mega/Mega"
 import ParImpar from "./UfParIm/ParImpar"
 import UseRef from "./UseRef/UseRef"
+import UseReducer from "./UseReducer/Reducer"
 function App() {
   return (
     <section className="app">
+       <Desafios title="Reducer">
+        <UseReducer/>
+      </Desafios>
       <Desafios title="userRef">
         <UseRef/>
       </Desafios>
